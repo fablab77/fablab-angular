@@ -1,0 +1,33 @@
+<div aria-hidden="true" class="modal fade use-modal" id="use-1" role="dialog" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="upper text-center">
+					{{modalSelected.title}}
+				</h4>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<h5>
+							Используется для производства:
+						</h5>
+						<ul>
+							<li ng-repeat="point in modalSelected.list">
+								{{point}}
+							</li>
+							<!-- <li>
+								упаковки для жевательной резинки, леденцов конфет и т.д.;
+							</li>
+							<li>
+								упаковки продуктов ресторанов быстрого питания.
+							</li> -->
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<img class="pull-left" src="{{modalSelected.image}}" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
