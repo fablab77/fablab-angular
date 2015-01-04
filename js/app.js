@@ -11,7 +11,7 @@ var app = angular.module('App', [
     $routeProvider.
       when('/', { 
         templateUrl:'partial/main.html',
-        controller: 'MainCtrl'
+        controller: 'generalController'
       }).
       when('/fablab', { templateUrl:'partial/fablab.html'}).
       when('/fablab/wherefrom', { templateUrl:'partial/fablab/wherefrom.html'}).
