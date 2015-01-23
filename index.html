@@ -18,7 +18,7 @@
 		<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
-	<body class="index">
+	<body class="{{location.path().replace('/', ' ').replace('/', ' ')}}">
 		<ng-include src="'include/header.html'"></ng-include>
 		<main analytics role="main" ng-view></main>
 		<ng-include src="'include/footer.html'"></ng-include>

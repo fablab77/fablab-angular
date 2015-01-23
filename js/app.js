@@ -6,12 +6,20 @@ var app = angular.module('App', [
   'appControllers',
   'scriptsDirectives',
   'yaMap'
-]);
+]).run(function($rootScope, $location) {
+    $rootScope.location = $location;
+});
+
+app.controller('mainController', function($scope) {
+    // if ($('body').addClass('main-page')) {
+    // }
+});
 
 app.config(function($routeProvider) {
   $routeProvider.
     when('/', { 
-      templateUrl:'partial/main.html'
+      templateUrl:'partial/main.html',
+      controller: 'mainController'
     }).
     when('/fablab', { templateUrl:'partial/fablab.html'}).
     when('/fablab/wherefrom', { templateUrl:'partial/fablab/wherefrom.html'}).
@@ -28,6 +36,7 @@ app.config(function($routeProvider) {
     when('/explore', { templateUrl:'partial/explore.html'}).
     when('/sign-in', { templateUrl:'partial/sign-in.html'}).
     when('/sign-up', { templateUrl:'partial/sign-up.html'}).
+    when('/ctpo', { templateUrl:'partial/ctpo.html'}).
     when('/event', { templateUrl:'partial/events.html'}).
     when('/contacts', { templateUrl:'partial/contacts.html'}).
     when('/equipment', { templateUrl:'partial/equipment.html'}).
